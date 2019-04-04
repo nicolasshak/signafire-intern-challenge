@@ -1,3 +1,33 @@
+input {
+	font-size: 14px;
+	padding: 10px;
+	margin-left: 5px;
+}
+
+textarea {
+	font-weight: 14px;
+	resize: none;
+	margin-left: 5px;
+}
+
+.starred {
+	margin-top: 78px;
+	margin-bottom: 5px;
+	font-size: 28px;
+
+	font-weight: bold;
+}
+
+.options {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.highlighted {
+	background-color: #ff4007;
+	color: #ffffff;
+}
+
 .message {
 	display: flex;
 	border: 1px solid #c5c5c5;
@@ -15,6 +45,7 @@
 .message-header {
 	display: flex;
 	justify-content: flex-end;
+	flex-wrap: wrap;
 
 	margin-bottom: 10px;
 }
@@ -32,8 +63,13 @@
 
 .source-date {
 	margin-right: auto;
+	padding-bottom: 5px;
 
 	color: #c5c5c5;
+}
+
+.buttons {
+	display: flex;
 }
 
 .empty {

@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-native": "^0.59.3",
+    "react-scripts": "2.1.8",
+    "regex": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

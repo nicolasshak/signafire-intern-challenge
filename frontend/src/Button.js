@@ -1,7 +1,7 @@
 import React from 'react';
-import './button.css';
+import './css/button.css';
 
-const Button = (props) => {
+export const Button = (props) => {
 
   var selector = 'button';
   var message = props.message;

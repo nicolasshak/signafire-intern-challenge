@@ -36,18 +36,10 @@ header {
 	margin: auto;
 }
 
-.starred {
-	margin-top: 78px;
-	margin-bottom: 5px;
-	font-size: 28px;
-
-	font-weight: bold;
-}
-
-.options {
-	display: flex;
-	justify-content: flex-start;
-}
-
-.content {
+@media only screen and (max-width: 700px) {
+  .container {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

@@ -6,6 +6,9 @@ module.exports = function(db, app) {
 		next();
 	});
 
+	/*
+	 * Highlighted text is returned as a string in JSX format
+	 */
 	app.get('/messages', function(req, res) {
 
 		query = `
@@ -42,6 +45,25 @@ module.exports = function(db, app) {
 				return console.log(err.message);
 			}
 
+			for(var i = 0; i < rows.length; i++) {
+
+				if(req.query['search'] !== undefined) {
+
+					if(rows[i]['trashed'] === 0) {
+
+						var regex = new RegExp(req.query['search'], 'g');
+						var highlighted = rows[i]['content'].replace(regex, '<span class="highlighted">' + req.query['search'] + '</span>');
+						
+						rows[i]['content'] = highlighted;
+					}
+				}
+
+				var parsedDate = new Date(rows[i]['timestamp']) + '';
+				parsedDate = parsedDate.split(' ');
+
+				rows[i]['timestamp'] = parsedDate[1] + ', ' + parsedDate[2] + ' ' + parsedDate[3];
+			}
+
 			res.send(rows);
 		});
 	});
@@ -69,9 +91,6 @@ module.exports = function(db, app) {
 		});
 	});
 
-	/*
-	 * Handles starring and trashing of messages
-	 */
 	app.post('/update', function(req, res) {
 
 		if( req.body.messageId !== undefined &&
@@ -98,3 +117,5 @@ module.exports = function(db, app) {
 		res.sendStatus('OK');
 	});
 }
+
+
