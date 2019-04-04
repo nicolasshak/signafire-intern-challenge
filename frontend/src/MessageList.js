@@ -191,8 +191,8 @@ const Message = (props) => {
 		        	 * ! flips colors of button (setTrashed() also inverts value)
 		        	 */
 		        	value={!props.messageInfo.trashed}
-		        	message="Trash Message"
-		        	activeMessage="Trashed"
+		        	message="Trashed"
+		        	activeMessage="Trash Message"
 		        	func={props.setTrashed}
 		        	messageid={props.messageInfo.message_id}
 		        />
