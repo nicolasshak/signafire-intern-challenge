@@ -1,0 +1,53 @@
+body {
+	font-family: sans-serif;
+	margin: 0px;
+	font-size: 14px;
+}
+
+header {
+	position: fixed;
+
+	top: 0px;
+	right: 0px;
+
+	width: 100vw;
+
+	background-color: #efefef;
+
+	border-bottom: 1px solid #c5c5c5;
+
+	color: #555555;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	padding: 5px;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.container {
+	width: 82vw;
+	margin: auto;
+}
+
+.starred {
+	margin-top: 78px;
+	margin-bottom: 5px;
+	font-size: 28px;
+
+	font-weight: bold;
+}
+
+.options {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.content {
+}

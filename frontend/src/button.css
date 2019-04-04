@@ -1,0 +1,16 @@
+.button {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid #c5c5c5;
+}
+
+.button-active {
+	border: 1px solid #ff4007;
+	color: #ffffff;
+	background-color: #ff4007;
+}
+
+.button + .button {
+	margin-left: 5px;
+}

@@ -1,0 +1,41 @@
+.message {
+	display: flex;
+	border: 1px solid #c5c5c5;
+
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.message-contents {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.message-header {
+	display: flex;
+	justify-content: flex-end;
+
+	margin-bottom: 10px;
+}
+
+.user-details {
+	text-align: center;
+	width: 128px;
+	margin-right: 10px;
+}
+
+.user-handle {
+	margin-top: 10px;
+	text-overflow: hidden;
+}
+
+.source-date {
+	margin-right: auto;
+
+	color: #c5c5c5;
+}
+
+.empty {
+	font-weight: bold;
+}
